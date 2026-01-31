@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lekcja 1 — TALENT DO JĘZYKÓW TO MIT</title>
+  <link rel="stylesheet" href="lesson.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <div class="site-title">TALKS PO POLSKU</div>
+      <!-- Навигация убрана: только название -->
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="lesson-left">
+      <nav class="crumbs"><a href="calendar.html">&lt; Plan nauki</a> / Lekcja 1.</nav>
+
+      <h1 class="lesson-title">Lekcja 1. <strong>Talent do języków to mit.</strong><br>3 kroki, żeby zostać poliglotą</h1>
+      <p class="subtitle"><span class="level">Poziom B1</span> Oglądaj wykład TED Piotra Kruka i poznaj słownictwo.</p>
+
+      <!-- Видео-плеер -->
+      <div id="playerWrap" class="player-wrap">
+        <div id="player" class="player"></div>
+        <div class="controls-line">
+          <div id="currentTime" class="time">00:00</div>
+          <div id="duration" class="duration">/ 00:00</div>
+        </div>
+      </div>
+
+      <div class="lesson-description">
+        <h3>O lekcji</h3>
+        <p>Audition i zapoznanie ze słownictwem z wystąpienia:
+          <em>TALENT DO JĘZYKÓW TO MIT. PIOTR KRUK | TEDxSGH</em></p>
+
+        <div class="actions-row">
+          <button id="markWatched" class="btn-outline">Отметить как просмотрено</button>
+          <button id="downloadNotes" class="btn-ghost" onclick="alert('Здесь можно добавить скачивание заметок')">Скачать заметки (PDF)</button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="lesson-right">
+      <div class="panel plan-panel">
+        <h4>Plan lekcji</h4>
+        <ol class="plan-list">
+          <li class="plan-item done">1. TED — <a href="#" id="playVideoLink">Wysłuchaj wykładu</a></li>
+          <li class="plan-item">2. Słownictwo — <a id="linkDictionary" href="dictionary.html?id=2026-02-01">Poznaj słowa</a></li>
+          <li class="plan-item">3. Zadanie — <a id="linkExercise" href="exercise.html?id=2026-02-01">Zrób zadanie</a></li>
+        </ol>
+        <button id="openDictionary" class="btn-primary">Poznaj słowa →</button>
+      </div>
+
+      <div class="panel tasks-panel">
+        <h4>Dzisiejsze zadania</h4>
+        <ul class="tasks">
+          <li><input type="checkbox" id="task1" checked disabled> Wysłuchaj wykładu</li>
+          <li><label for="task2"><input type="checkbox" id="task2"> Poznaj słownictwo</label></li>
+          <li><label for="task3"><input type="checkbox" id="task3"> Zrób zadanie</label></li>
+        </ul>
+        <button id="openExercise" class="btn-primary outline">Zrób zadanie →</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- YouTube API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="lesson.js"></script>
+</body>
+</html>

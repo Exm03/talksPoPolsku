@@ -1,0 +1,90 @@
+:root{
+  --bg:#0b0607;
+  --panel: rgba(0,0,0,0.5);
+  --accent: #c71f1f;
+  --muted:#bdb0b0;
+  --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Montserrat, Arial, sans-serif;background: radial-gradient(circle at 30% 10%, #3b0000, #070707); color:#fff}
+.container{max-width:1180px;margin:0 auto;padding:28px}
+
+.site-header.small{padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+.brand{font-weight:800;color:#ffdfdf;letter-spacing:1px;font-size:20px}
+
+/* layout */
+.calendar-wrapper{display:flex;gap:28px}
+.left-info{width:34%;padding:22px;border-radius:12px;background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.2));border:1px solid rgba(255,255,255,0.03)}
+.left-info h2{margin-top:0}
+.controls{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.btn{background:var(--accent);border:none;color:white;padding:10px 12px;border-radius:8px;cursor:pointer}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+/* calendar panel */
+.calendar-panel{flex:1;background:linear-gradient(180deg, rgba(0,0,0,0.5), rgba(20,6,6,0.4));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
+.cal-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.03);margin-bottom:10px}
+.month-label{font-weight:600}
+.nav-btn{background:transparent;color:#fff;border:none;font-size:22px;cursor:pointer;opacity:0.9}
+.weekdays{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;color:var(--muted);padding-bottom:8px}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+.day{
+  min-height:92px;padding:8px;border-radius:8px;background:rgba(255,255,255,0.02);position:relative;overflow:visible;
+  transition:box-shadow .18s, transform .12s;
+}
+.day:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,0.6)}
+.day .num{position:absolute;top:8px;right:8px;color:var(--muted);font-size:13px}
+.lesson-card{
+  margin-top:26px;
+  background:linear-gradient(180deg,#f7f2f0,#e7dcdc);color:#111;padding:8px;border-radius:8px;cursor:pointer;box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+  font-size:13px;display:flex;justify-content:space-between;align-items:center;
+}
+.lesson-card .title{font-weight:700}
+.lesson-card .meta{display:flex;gap:8px;align-items:center}
+.red-dot{width:10px;height:10px;border-radius:999px;background:var(--accent);display:inline-block;box-shadow:0 2px 6px rgba(199,31,31,0.45)}
+.lesson-card.viewed{opacity:0.6;background:linear-gradient(180deg,#cfcfcf,#bfbfbf);color:#222}
+.empty{min-height:80px;opacity:0.06}
+
+/* footer */
+.cal-footer{padding-top:12px;text-align:center;color:var(--muted);font-size:13px}
+
+/* responsive */
+@media (max-width:1000px){
+  .calendar-wrapper{flex-direction:column}
+  .left-info{width:100%}
+}
+
+
+.lesson-card { display:flex; gap:10px; align-items:center; padding:8px; }
+.lesson-icon-wrap { width:40px; height:40px; display:flex; align-items:center; justify-content:center; position:relative }
+.lesson-icon { font-size:20px; line-height:1; width:28px; height:28px; display:inline-flex; align-items:center; justify-content:center; }
+.lesson-icon-img { width:28px; height:28px; object-fit:contain; border-radius:6px; }
+
+.icon-locked {
+  position:absolute; right:0; bottom:0; width:18px; height:18px; display:flex; align-items:center; justify-content:center;
+  background: rgba(0,0,0,0.45); border-radius:50%; box-shadow:0 2px 6px rgba(0,0,0,0.4);
+}
+.icon-done { width:28px; height:28px; display:flex; align-items:center; justify-content:center; background: linear-gradient(180deg,#6fb26f,#2f8f2f); border-radius:6px; }
+
+.lesson-card.locked { opacity:0.6; cursor:default; }
+.lesson-card.locked .title { opacity:0.7; }
+.lesson-card .title { flex:1; font-weight:700; font-size:13px; }
+.lesson-card .meta { display:flex; gap:8px; align-items:center; margin-left:8px }
+.tag{ font-size:11px; opacity:0.8 }
+.red-dot{width:10px;height:10px;border-radius:999px;background:#c71f1f;display:inline-block}
+
+.lesson-card.viewed { opacity:0.75; filter:grayscale(0.05); }
+
+/* при наведении на locked — подсказка (pure CSS) */
+.lesson-card.locked:hover::after {
+  content: "Будет доступно в дату";
+  position: absolute;
+  transform: translateY(-120%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding:6px 8px;
+  border-radius:6px;
+  font-size:12px;
+  white-space:nowrap;
+  pointer-events:none;
+}

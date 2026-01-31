@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kalendarz — TALKS PO POLSKU</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+  <header class="site-header small">
+    <div class="container header-inner">
+      <div class="brand">TALKS PO POLSKU</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="calendar-wrapper">
+      <aside class="left-info">
+        <h2>TALKS PO POLSKU</h2>
+        <p>To projekt edukacyjny — codziennie nowe materiały. Kliknij w kartку dnia, aby открыть урок.</p>
+
+        <div class="controls">
+          <label><input type="checkbox" id="filterNew" checked> Показать только новые</label>
+          <button id="showAll" class="btn">Показать все</button>
+        </div>
+      </aside>
+
+      <section class="calendar-panel">
+        <div class="cal-header">
+          <button id="prevMonth" class="nav-btn" aria-label="Пред. месяц">‹</button>
+          <div id="monthLabel" class="month-label">Luty 2026</div>
+          <button id="nextMonth" class="nav-btn" aria-label="След. месяц">›</button>
+        </div>
+
+        <div class="weekdays">
+          <div>pon</div><div>wt</div><div>śr</div><div>czw</div><div>pt</div><div>sob</div><div>niedz</div>
+        </div>
+
+        <div id="calendarGrid" class="calendar-grid" aria-live="polite"></div>
+
+        <div class="cal-footer">
+          <button id="showAllLessons" class="btn ghost">› Pokaż wszystkie ›</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="calendar.js"></script>
+</body>
+</html>

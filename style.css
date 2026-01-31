@@ -1,0 +1,234 @@
+/* Общие настройки */
+:root{
+  --container-width: 1180px;
+  --red: #d92a24;
+  --red-dark: #b11f1b;
+  --text-light: #f4f4f4;
+  --muted: #cfcfcf;
+  --bg-dark: #0b0b0b;
+  --glass: rgba(255,255,255,0.03);
+  --transition-fast: 180ms;
+}
+
+*{box-sizing: border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text-light);
+  background: #efefef;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Контейнер центр */
+.container{
+  width: 92%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+/* header */
+.site-header{
+  padding: 28px 0 6px;
+  background: transparent;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand{
+  font-weight:800;
+  letter-spacing:1px;
+  font-size:20px;
+  color:var(--text-light);
+}
+
+/* HERO */
+.hero{
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0.6) 100%),
+    url('images/hero-bg.jpg') no-repeat right center / cover;
+  padding: 48px 0 32px;
+  border: 12px solid #111; /* визуальная рамка похожая на макет */
+  color: var(--text-light);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1fr 520px;
+  gap: 32px;
+  align-items:center;
+  min-height: 520px;
+}
+
+/* Левый блок */
+.hero-left{
+  max-width: 620px;
+}
+.hero-eyebrow{
+  font-family: "Playfair Display", serif;
+  font-weight:700;
+  font-size:64px;
+  margin: 12px 0 22px;
+  line-height:0.95;
+  letter-spacing: -1px;
+  color: #fff;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+.lead{
+  font-size:16px;
+  color:var(--muted);
+  margin: 0 0 18px;
+  line-height:1.6;
+}
+.desc{
+  color:var(--muted);
+  margin-bottom:26px;
+  line-height:1.6;
+}
+
+/* CTA */
+.cta-wrap{
+  margin-top: 6px;
+}
+.cta-button{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background: linear-gradient(180deg,var(--red), var(--red-dark));
+  color:white;
+  border:none;
+  padding: 14px 26px;
+  font-weight:700;
+  border-radius:12px;
+  box-shadow: 0 8px 24px rgba(217,42,36,0.28);
+  cursor:pointer;
+  font-size:18px;
+  transition: transform var(--transition-fast) ease, box-shadow var(--transition-fast) ease, filter var(--transition-fast);
+  transform-origin:center;
+  position:relative;
+  overflow:hidden;
+}
+.cta-button:focus{
+  outline: 3px solid rgba(217,42,36,0.22);
+  outline-offset: 3px;
+}
+.cta-button:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(217,42,36,0.35);
+  filter:brightness(1.03);
+}
+.cta-button:active{
+  transform: translateY(-2px) scale(0.99);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+/* маленькая стрелка */
+.cta-chevron{
+  display:inline-block;
+  transform: translateY(-1px);
+  font-size:20px;
+  opacity:0.95;
+}
+
+/* ripple span (инъектится JS) */
+.cta-button .ripple{
+  position:absolute;
+  border-radius:50%;
+  transform: scale(0);
+  background: rgba(255,255,255,0.18);
+  pointer-events:none;
+  animation: ripple 600ms ease-out;
+}
+@keyframes ripple{
+  to{ transform: scale(12); opacity:0; }
+}
+
+/* Правый блок — ноут */
+.hero-right{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+.hero-right .laptop{
+
+  width:100%;
+  max-width:520px;
+  transform: perspective(900px) translateZ(0) rotateY(-6deg);
+  filter: drop-shadow(0 18px 40px rgba(0,0,0,0.6));
+  transition: transform 400ms cubic-bezier(.2,.9,.2,1);
+  user-select:none;
+  -webkit-user-drag: none;
+}
+/* .hero-right .laptop:hover{
+  transform: perspective(900px) translateZ(8px) rotateY(-3deg) translateY(-6px);
+} */
+
+.hero {
+    background-image: url('images/ChatGPT\ Image\ 31\ янв.\ 2026\ г.\,\ 19_49_32.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover ;
+}
+
+/* Белая полоса (band) */
+.white-band{
+  background: #fff;
+  color: #111;
+  padding: 28px 0;
+  border-bottom: 1px solid #eee;
+}
+.band-grid{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.brand-large{
+  margin:0;
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+.contacts{
+  text-align:right;
+}
+.contact-columns{
+  display:flex;
+  gap:24px;
+  align-items:center;
+}
+.contact-item{ font-size:14px; color:#666; }
+
+/* Footer */
+.site-footer{
+  background:#080808;
+  color: #d8d8d8;
+  padding: 18px 0;
+  font-size:13px;
+}
+
+.icon-link {
+      margin-top: 15px;
+    border: 4px solid #ccc;
+    height: 43px;
+    border-radius: 9.36px;
+}
+
+/* Адаптив */
+@media (max-width: 980px){
+  .hero-grid{ grid-template-columns: 1fr; padding-bottom: 8px; min-height:480px; }
+  .hero-right{ order: -1; margin-bottom:22px; }
+  .hero-eyebrow{ font-size:46px; }
+  .laptop{ max-width:420px; }
+  .brand-large{ font-size:22px; }
+}
+@media (max-width: 520px){
+  .hero-eyebrow{ font-size:34px; }
+  .lead, .desc{ font-size:15px; }
+  .cta-button{ width:100%; justify-content:center; padding:14px; font-size:16px; border-radius:10px; }
+}
