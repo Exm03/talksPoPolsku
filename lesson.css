@@ -20,4 +20,8 @@ body{margin:0;font-family:Montserrat,Arial;background:radial-gradient(circle at 
 .btn-ghost{background:transparent;border:none;color:var(--muted);cursor:pointer}
 .tasks{list-style:none;padding:0;margin:0}
 .tasks li{padding:8px 0;color:var(--muted)}
+a {color: white;
+    text-decoration: none;}
+a:hover {color: silver;
+    text-decoration: underline; transition: 0.4s}
 @media (max-width:980px){.main-grid{grid-template-columns:1fr}}
