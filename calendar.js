@@ -9,14 +9,14 @@
      iconUrl: (опционально) — относительный или абсолютный путь к картинке (приоритет выше icon)
   */
   const LESSONS = {
-    "2026-02-01": { title: "1.1 Talent do języków to mit", tag: "TED", type: "new", href: "lesson.html?id=2026-02-01", icon: "🎧" },
-    "2026-02-02": { title: "1.2 Talent do języków to mit", tag: "TED", type: "new", href: "lesson.html?id=2026-02-02", icon: "📄" },
-    "2026-02-03": { title: "1.3 Talent do języków to mit", tag: "TED", type: "new", href: "lesson.html?id=2026-02-03", icon: "✅" },
-    "2026-02-04": { title: "1.4 Talent do języków to mit", tag: "TED", type: "new", href: "lesson.html?id=2026-02-04", icon: "📝" },
-    "2026-02-05": { title: "1.4 Talent do języków to mit", tag: "TED", type: "new", href: "lesson.html?id=2026-02-05", icon: "📝" },
-    "2026-02-06": { title: "1.4 Talent do języków to mit", tag: "TED", type: "new", href: "lesson.html?id=2026-02-06", icon: "📝" },
-    "2026-02-07": { title: "1.4 Talent do języków to mit", tag: "TED", type: "new", href: "lesson.html?id=2026-02-07", icon: "📝" },
-    "2026-02-08": { title: "1.4 Talent do języków to mit", tag: "TED", type: "new", href: "lesson.html?id=2026-02-08", icon: "📝" },
+    "2026-02-01": { title: "1.1 Talent do języków to mit", type: "new", href: "lesson.html?id=2026-02-01", icon: "🎧" },
+    "2026-02-02": { title: "1.2 Talent do języków to mit", type: "new", href: "lesson.html?id=2026-02-02", icon: "📄" },
+    "2026-02-03": { title: "1.3 Talent do języków to mit", type: "new", href: "lesson.html?id=2026-02-03", icon: "✅" },
+    "2026-02-04": { title: "1.4 Talent do języków to mit", type: "new", href: "lesson.html?id=2026-02-04", icon: "📝" },
+    "2026-02-05": { title: "1.4 Talent do języków to mit", type: "new", href: "lesson.html?id=2026-02-05", icon: "📝" },
+    "2026-02-06": { title: "1.4 Talent do języków to mit", type: "new", href: "lesson.html?id=2026-02-06", icon: "📝" },
+    "2026-02-07": { title: "1.4 Talent do języków to mit", type: "new", href: "lesson.html?id=2026-02-07", icon: "📝" },
+    "2026-02-08": { title: "1.4 Talent do języków to mit", type: "new", href: "lesson.html?id=2026-02-08", icon: "📝" },
   };
   /* ========================================= */
 
