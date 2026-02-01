@@ -31,7 +31,7 @@ body{
 /* header */
 .site-header{
   padding: 28px 0 6px;
-  background: transparent;
+  background: black;
 }
 .header-inner{
   display:flex;
