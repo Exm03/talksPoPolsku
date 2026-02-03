@@ -178,7 +178,7 @@
 
     const todayPoland = polandToday();
 
-    for (let day = 1; day <= daysInMonth; day++){
+    for (let day = 1; day <= daysInMonth; day++) {
       const dateKey = isoDate(viewYear, viewMonth, day);
       const cell = document.createElement('div');
       cell.className = 'day';
@@ -188,21 +188,28 @@
       cell.appendChild(num);
 
       const lesson = LESSONS[dateKey];
-        
+      
+        if (lesson) {
+        // доступность: доступно если дата урока <= текущая дата в Польше
+        const available = dateKey <= todayPoland;
+        const watched = isLessonWatched(dateKey);
 
- if (lesson) {
-  const available = dateKey <= todayPoland;
-  const watched = isLessonWatched(dateKey);
-
-  // фильтр "показывать только новые"
-  if (viewOnlyNew && watched) {
-    // не показываем просмотренные уроки
-    continue;
+        // фильтр "показывать только новые" (если включён)
+        if (viewOnlyNew && watched || viewOnlyNew && !available ) {
+          console.log(lesson);
+          // не показываем
+        } else {
+          const card = createLessonCard(dateKey, lesson, available, watched);
+          cell.appendChild(card);
+        }
+      }
+      calendarGrid.appendChild(cell);
+    }
   }
 
-  const card = createLessonCard(dateKey, lesson, available, watched);
-  cell.appendChild(card);
-}
+
+
+
 
   // навигация
   prevBtn.addEventListener('click', function () {
