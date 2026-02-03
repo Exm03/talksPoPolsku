@@ -39,11 +39,11 @@
   markBtn.addEventListener('click', () => {
     localStorage.setItem(WATCHED_KEY, 'true');
     localStorage.setItem(`lesson_${LESSON_ID}_lastViewed`, new Date().toISOString());
-    markBtn.textContent = 'Просмотрено';
+    markBtn.textContent = 'Obejrzane';
     markBtn.disabled = true;
     // Обновить календарь (если в одной сессии)
     try { if (window._markLessonWatched) window._markLessonWatched(LESSON_ID); } catch(e){}
-    alert('Урок отмечен как просмотренный');
+    alert('Lekcja oznaczona jako obejrzana');
   });
 
   // YouTube API
@@ -87,7 +87,7 @@ window.onYouTubeIframeAPIReady = function () {
     }, 5000);
     // UI: если уже просмотрено
     if (localStorage.getItem(WATCHED_KEY) === 'true') {
-      markBtn.textContent = 'Просмотрено';
+      markBtn.textContent = 'Obejrzane';
       markBtn.disabled = true;
     }
   }
@@ -127,7 +127,7 @@ window.onYouTubeIframeAPIReady = function () {
 
   // Если страница загрузилась и урок уже отмечен — обновим кнопку
   if (localStorage.getItem(WATCHED_KEY) === 'true') {
-    markBtn.textContent = 'Просмотрено';
+    markBtn.textContent = 'Obejrzane';
     markBtn.disabled = true;
   }
 })();
