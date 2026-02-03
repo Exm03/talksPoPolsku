@@ -70,7 +70,7 @@
   function openLesson(id, href, available){
     if (!available) {
       // короткое уведомление о дате доступности в часовом поясе Польши
-      const msg = `Урок будет доступен ${id} (часовой пояс Polska)`;
+      const msg = `Lekcja będzie dostępna ${id} (Strefa czasowa: Europa/Warszawa)`;
       // мягкий UX: используем alert, можно заменить на кастомный тултип
       alert(msg);
       return;
