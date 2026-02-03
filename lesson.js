@@ -25,8 +25,6 @@
   // Привязки ссылок
   linkDict.href = `dictionary.html?id=${LESSON_ID}`;
   linkEx.href = `exercise.html?id=${LESSON_ID}`;
-  openDictBtn.onclick = () => location.href = `dictionary.html?id=${LESSON_ID}`;
-  openExBtn.onclick = () => location.href = `exercise.html?id=${LESSON_ID}`;
   playVideoLink.onclick = (e) => { e.preventDefault(); if (player) player.playVideo(); };
 
   // Восстановление состояния задач
