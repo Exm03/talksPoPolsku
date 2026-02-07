@@ -60,22 +60,13 @@ let templateReady = false;
   B2: "https://docs.google.com/forms/d/1IEmXa4UKQV4zvmQHgJi0AvAKIMKU-wUiw0XpjCFFr1M/edit?usp=drivesdk",
   C1: "https://docs.google.com/forms/d/1Qg1Irj6ydwBl20DYfVvmaHcDOpdQp8Ynlbikd-3-Czw/edit?usp=drivesdk",
   ALL: "https://docs.google.com/forms/d/1-GiAp0qTVyw36upl4qzLF5nrBP_hPhZMZMjjr15HsQA/edit?usp=drivesdk"
-}, 
-
-    const FALLBACK = {
-    "2026-02-03": { title: "[CZYT] Talent do języków to mit", 
-      type: "new", 
-      href: "lesson.html?id=2026-02-01", 
-      videoId: "96gGoITaeG4", 
-      vocabHref: "https://quizlet.com/pl/1137942144/1-talent-do-jezykow-to-mit-3-kroki-zeby-zostac-poliglota-piotr-kruk-tedxsgh-flash-cards/?i=235rwg&x=1qqt", 
-      exercises: {
-  B1: "https://docs.google.com/forms/d/e/1FAIpQLSeX7fMM-ZT-jBvDyCuPAZCrE0dVy8IT5Ly9zfrFQFIjysVs1g/viewform?usp=header",
-  B2: "https://docs.google.com/forms/d/e/1FAIpQLSe5crkagk9GOrIBKjUYj7U595J31WY4QLxmPgiVp2Ds1S2crg/viewform?usp=header",
-  C1: "https://docs.google.com/forms/d/e/1FAIpQLSe5crkagk9GOrIBKjUYj7U595J31WY4QLxmPgiVp2Ds1S2crg/viewform?usp=header",
-  ALL: "https://docs.google.com/forms/d/e/1FAIpQLSdXUETJdfm0R7-iMhdmyUbwK9PUhtpVoekT_wxjVk7YgWOukg/viewform?usp=header"
-}, 
-      icon: "🎧" },
-    "2026-02-03": { title: "[CZYT] Talent do języków to mit", type: "new", href: "lesson.html?id=2026-02-03", videoId: "96gGoITaeG4", vocabHref: "", exe: "lesson2-exercise.html", icon: "📄" },
+}, icon: "🎧" },
+    "2026-02-03": { title: "[CZYT] Talent do języków to mit", type: "new", href: "lesson.html?id=2026-02-03", videoId: "96gGoITaeG4", vocabHref: "",  exercises: {
+  B1: "https://docs.google.com/forms/d/1-O_R3QBtxhKg06s0ZbOp_nGal1U0zXmRGXjMU8UFKxk/edit?usp=drivesdk",
+  B2: "https://docs.google.com/forms/d/1IEmXa4UKQV4zvmQHgJi0AvAKIMKU-wUiw0XpjCFFr1M/edit?usp=drivesdk",
+  C1: "https://docs.google.com/forms/d/1Qg1Irj6ydwBl20DYfVvmaHcDOpdQp8Ynlbikd-3-Czw/edit?usp=drivesdk",
+  ALL: "https://docs.google.com/forms/d/1-GiAp0qTVyw36upl4qzLF5nrBP_hPhZMZMjjr15HsQA/edit?usp=drivesdk"
+}, icon: "📄" },
     "2026-02-05": { title: "[GRAM] Talent do języków to mit", type: "new", href: "lesson.html?id=2026-02-05", videoId: "96gGoITaeG4", vocabHref: "", exe: "lesson3-exercise.html", icon: "📚" },
     "2026-02-07": { title: "[PIS] Talent do języków to mit", type: "new", href: "lesson.html?id=2026-02-07", videoId: "96gGoITaeG4", vocabHref: "", exe: "lesson4-exercise.html", icon: "✍" },
     "2026-02-09": { title: "[SŁUCH] Cyfrowy obrzęk mózgu", type: "new", href: "lesson.html?id=2026-02-09", videoId: "96gGoITaeG4", vocabHref: "", exe:"lesson5-exercise.html" , icon: "🎧" },
